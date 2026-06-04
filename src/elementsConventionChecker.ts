@@ -223,11 +223,14 @@ export class MemberStartsWithV extends MemberRule {
 	}
 
 	checkStartsWithV(member: Member, diagnostics: Diagnostic[]): void {
-		if (member.id.value.charAt(0) !== "v") return;
+		// Allow words that start with v unless the second char is an uppercase or integer.
+		// For example: "v1whatever" or "vWhatever"
+		if (!/^v[0-9A-Z]/.test(member.id.value)) return;
 		if (isPublicDeclaration(member)) {
 			diagnostics.push(createDiagnostic(
 				member,
-				"is public and starts with 'v'.",
+				"is public and starts with '" +
+				member.id.value.slice(0, 2) + "'.",
 				DiagnosticSeverity.Information,
 				this.ruleName,
 			));
@@ -235,7 +238,8 @@ export class MemberStartsWithV extends MemberRule {
 		else {
 			diagnostics.push(createDiagnostic(
 				member,
-				"starts with 'v'.",
+				"starts with '" +
+				member.id.value.slice(0, 2) + "'.",
 				DiagnosticSeverity.Warning,
 				this.ruleName
 			));
