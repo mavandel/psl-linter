@@ -59,7 +59,7 @@ describe("Members tests", () => {
 		assert.strictEqual(diagnosticsOnLine.length,1);
 		assert.strictEqual(
 			diagnosticsOnLine[0].message,
-			'Declaration "vString" starts with \'v\'.'
+			'Declaration "vString" starts with \'vS\'.'
 		);
 		assert.strictEqual(diagnosticsOnLine[0].severity, api.DiagnosticSeverity.Warning);
 	});
@@ -68,7 +68,7 @@ describe("Members tests", () => {
 		assert.strictEqual(diagnosticsOnLine.length, 1);
 		assert.strictEqual(
 			diagnosticsOnLine[0].message,
-			'Declaration "vNumber" is public and starts with \'v\'.'
+			'Declaration "v9someNumber" is public and starts with \'v9\'.'
 		);
 		assert.strictEqual(
 			diagnosticsOnLine[0].severity,

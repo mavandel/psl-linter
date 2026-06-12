@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-05-21
+
+### Changed
+
+- Modified MemberStartsWithV rule to allow words starting with a 'v' unless
+  the second character in that word is in uppercase or if it is a number.
+
 ## [2.0.0] - 2026-01-09
 
 ### Added
@@ -97,6 +104,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - PropertyLiteralCase psl-lint rule
 
 [Unreleased]: https://github.com/ing-bank/psl-linter/compare/v2.0.0...HEAD
+[2.1.0]: https://github.com/ing-bank/psl-linter/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/ing-bank/psl-linter/compare/3559ee427a52837baefcdb9b83cd3b97f8eb3324...v2.0.0
 <!--
 Links of the release below are before the project was split of the main

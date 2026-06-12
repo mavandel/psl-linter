@@ -22,5 +22,5 @@ private void String methodInChild()
 	** ENDDOC */
 	type String y
 	type String vString
-	type public Number vNumber
+	type public Number v9someNumber
 	quit
